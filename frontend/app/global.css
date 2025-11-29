@@ -1,37 +1,38 @@
-/* @import "tailwindcss";
+@import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
+/* @custom-variant dark (&:is(.dark *)); */
 
 /* HealthAI Guardian Color Palette */
-/* :root { */
+:root { 
   /* Primary Colors */
-  /* --background: #0a1d37; */
-  /* --foreground: #ffffff; */
-  /* --primary: #23d4ff; */
-  /* --primary-dark: #1aa8cc; */
-  /* --secondary: #a56bff; */
-  /* --accent: #9cff2e; */
+  --background: #0a1d37;
+  --foreground: #ffffff;
+  --primary: #23d4ff;
+  --primary-dark: #1aa8cc;
+  --secondary: #a56bff;
+   --accent: #9cff2e;
 
   /* Neutral/Glass Colors */
-  /* --glass-light: rgba(255, 255, 255, 0.1); */
-  /* --glass-dark: rgba(10, 29, 55, 0.4); */
-  /* --border-glow: rgba(35, 212, 255, 0.2); */
-
+  --glass-light: rgba(255, 255, 255, 0.1);
+  --glass-dark: rgba(10, 29, 55, 0.4);
+  --border-glow: rgba(35, 212, 255, 0.2);
+  --font-sans: "Geist", "Geist Fallback", sans-serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback", monospace;
   /* Card & UI */
-  /* --card: #0f2847; */
-  /* --card-foreground: #ffffff; */
-  /* --muted: #1a3a5c; */
-  /* --muted-foreground: #b0b8c1; */
+  --card: #0f2847;
+  --card-foreground: #ffffff;
+  --muted: #1a3a5c;
+  --muted-foreground: #b0b8c1;
 
   /* Gradients */
-  /* --gradient-cyan-purple: linear-gradient(135deg, #23d4ff 0%, #a56bff 100%); */
-  /* --gradient-blue-violet: linear-gradient(135deg, #0a1d37 0%, #2d1b4e 100%); */
+  --gradient-cyan-purple: linear-gradient(135deg, #23d4ff 0%, #a56bff 100%);
+  --gradient-blue-violet: linear-gradient(135deg, #0a1d37 0%, #2d1b4e 100%);
 
-  /* --radius: 0.875rem; */
-/* } */
+  --radius: 0.875rem;
+}
 
-/* .dark {
+.dark {
   --background: #0a1d37;
   --foreground: #ffffff;
   --primary: #23d4ff;
@@ -45,17 +46,16 @@
   --card-foreground: #ffffff;
   --muted: #1a3a5c;
   --muted-foreground: #b0b8c1;
+  
 }
 
-@theme inline {
-  --font-sans: "Geist", "Geist Fallback";
-  --font-mono: "Geist Mono", "Geist Mono Fallback";
-}
 
 @layer base {
-  * {
-    @apply border-blue-900/20 outline-cyan-400/50;
-  }
+* {
+    border: 1px solid rgba(30, 58, 138, 0.2);   /* border-blue-900/20 */
+    outline: 1px solid rgba(34, 211, 238, 0.5); /* outline-cyan-400/50 */
+}
+
 
   html {
     background: var(--background);
@@ -63,14 +63,19 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-blue-950 via-blue-900 to-purple-950;
+      background-image: linear-gradient(
+    to bottom right,
+    rgb(3, 7, 18),   /* blue-950 */
+    rgb(23, 37, 84), /* blue-900 */
+    rgb(46, 16, 101) /* purple-950 */
+  );
     color: var(--foreground);
     font-family: var(--font-sans);
   }
-} */
+} 
 
 /* Glassmorphism */
-/* .glass {
+ .glass {
   background: var(--glass-light);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -85,16 +90,16 @@
 }
 
 /* Gradient Backgrounds */
-/* .gradient-cyan-purple {
+ .gradient-cyan-purple {
   background: var(--gradient-cyan-purple);
 }
 
 .gradient-blue-violet {
   background: var(--gradient-blue-violet);
-} */
+} 
 
 /* Neon Glow Effects */
-/* .glow-cyan {
+ .glow-cyan {
   box-shadow: 0 0 20px rgba(35, 212, 255, 0.4), inset 0 0 20px rgba(35, 212, 255, 0.1);
 }
 
@@ -104,10 +109,10 @@
 
 .glow-lime {
   box-shadow: 0 0 15px rgba(156, 255, 46, 0.4), inset 0 0 15px rgba(156, 255, 46, 0.1);
-} */
+} 
 
 /* Animated Background */
-/* @keyframes float-particles {
+ @keyframes float-particles {
   0% {
     transform: translateY(100vh) translateX(0);
     opacity: 0;
@@ -163,13 +168,13 @@
   100% {
     background-position: 1000px 0;
   }
-} */
-/* 
+} 
+
 .animate-float-particles {
   animation: float-particles 20s linear infinite;
-} */
+} 
 
-/* .animate-glow-pulse {
+ .animate-glow-pulse {
   animation: glow-pulse 2s ease-in-out infinite;
 }
 
@@ -184,10 +189,10 @@
 .animate-shimmer {
   animation: shimmer 2s infinite;
   background-size: 1000px 100%;
-} */
+} 
 
 /* Hover Effects */
-/* .hover-lift {
+ .hover-lift {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -197,34 +202,34 @@
 }
 
 /* Smooth Transitions */
-/* .transition-smooth {
+ .transition-smooth {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}  */
+}  
 
 /* Grid Background */
-/* .grid-background {
+ .grid-background {
   background-image: linear-gradient(rgba(35, 212, 255, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(35, 212, 255, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
 /* Neon Border */
-/* .neon-border {
+ .neon-border {
   border: 1px solid var(--primary);
   box-shadow: 0 0 10px rgba(35, 212, 255, 0.3), inset 0 0 10px rgba(35, 212, 255, 0.05);
-}  */
+}  
 
 /* Text Gradients */
-/* .text-gradient-cyan-purple {
+ .text-gradient-cyan-purple {
   background: var(--gradient-cyan-purple);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-} */
-/* 
+} 
+
 .text-gradient-lime {
   background: linear-gradient(135deg, #9cff2e 0%, #7fcc24 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}  */
+} 
