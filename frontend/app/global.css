@@ -1,0 +1,230 @@
+/* @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* HealthAI Guardian Color Palette */
+/* :root { */
+  /* Primary Colors */
+  /* --background: #0a1d37; */
+  /* --foreground: #ffffff; */
+  /* --primary: #23d4ff; */
+  /* --primary-dark: #1aa8cc; */
+  /* --secondary: #a56bff; */
+  /* --accent: #9cff2e; */
+
+  /* Neutral/Glass Colors */
+  /* --glass-light: rgba(255, 255, 255, 0.1); */
+  /* --glass-dark: rgba(10, 29, 55, 0.4); */
+  /* --border-glow: rgba(35, 212, 255, 0.2); */
+
+  /* Card & UI */
+  /* --card: #0f2847; */
+  /* --card-foreground: #ffffff; */
+  /* --muted: #1a3a5c; */
+  /* --muted-foreground: #b0b8c1; */
+
+  /* Gradients */
+  /* --gradient-cyan-purple: linear-gradient(135deg, #23d4ff 0%, #a56bff 100%); */
+  /* --gradient-blue-violet: linear-gradient(135deg, #0a1d37 0%, #2d1b4e 100%); */
+
+  /* --radius: 0.875rem; */
+/* } */
+
+/* .dark {
+  --background: #0a1d37;
+  --foreground: #ffffff;
+  --primary: #23d4ff;
+  --primary-dark: #1aa8cc;
+  --secondary: #a56bff;
+  --accent: #9cff2e;
+  --glass-light: rgba(255, 255, 255, 0.08);
+  --glass-dark: rgba(10, 29, 55, 0.5);
+  --border-glow: rgba(35, 212, 255, 0.15);
+  --card: #0f2847;
+  --card-foreground: #ffffff;
+  --muted: #1a3a5c;
+  --muted-foreground: #b0b8c1;
+}
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+}
+
+@layer base {
+  * {
+    @apply border-blue-900/20 outline-cyan-400/50;
+  }
+
+  html {
+    background: var(--background);
+    color: var(--foreground);
+  }
+
+  body {
+    @apply bg-gradient-to-br from-blue-950 via-blue-900 to-purple-950;
+    color: var(--foreground);
+    font-family: var(--font-sans);
+  }
+} */
+
+/* Glassmorphism */
+/* .glass {
+  background: var(--glass-light);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glow);
+}
+
+.glass-dark {
+  background: var(--glass-dark);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(35, 212, 255, 0.1);
+}
+
+/* Gradient Backgrounds */
+/* .gradient-cyan-purple {
+  background: var(--gradient-cyan-purple);
+}
+
+.gradient-blue-violet {
+  background: var(--gradient-blue-violet);
+} */
+
+/* Neon Glow Effects */
+/* .glow-cyan {
+  box-shadow: 0 0 20px rgba(35, 212, 255, 0.4), inset 0 0 20px rgba(35, 212, 255, 0.1);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px rgba(165, 107, 255, 0.3), inset 0 0 20px rgba(165, 107, 255, 0.05);
+}
+
+.glow-lime {
+  box-shadow: 0 0 15px rgba(156, 255, 46, 0.4), inset 0 0 15px rgba(156, 255, 46, 0.1);
+} */
+
+/* Animated Background */
+/* @keyframes float-particles {
+  0% {
+    transform: translateY(100vh) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(35, 212, 255, 0.4), inset 0 0 20px rgba(35, 212, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(35, 212, 255, 0.6), inset 0 0 30px rgba(35, 212, 255, 0.15);
+  }
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+} */
+/* 
+.animate-float-particles {
+  animation: float-particles 20s linear infinite;
+} */
+
+/* .animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.animate-wave {
+  animation: wave-animation 3s linear infinite;
+}
+
+.animate-heartbeat {
+  animation: heartbeat 0.6s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+  background-size: 1000px 100%;
+} */
+
+/* Hover Effects */
+/* .hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(35, 212, 255, 0.2);
+}
+
+/* Smooth Transitions */
+/* .transition-smooth {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}  */
+
+/* Grid Background */
+/* .grid-background {
+  background-image: linear-gradient(rgba(35, 212, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(35, 212, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Neon Border */
+/* .neon-border {
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 10px rgba(35, 212, 255, 0.3), inset 0 0 10px rgba(35, 212, 255, 0.05);
+}  */
+
+/* Text Gradients */
+/* .text-gradient-cyan-purple {
+  background: var(--gradient-cyan-purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+} */
+/* 
+.text-gradient-lime {
+  background: linear-gradient(135deg, #9cff2e 0%, #7fcc24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}  */
